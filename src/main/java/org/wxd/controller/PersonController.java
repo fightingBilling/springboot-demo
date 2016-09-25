@@ -95,7 +95,6 @@ public class PersonController {
 
     @RequestMapping("/cacheput")
     public Person putCache(Person person){
-        System.out.println("#########test hot deployment....");
         personService.save(person);
         return person;
     }
