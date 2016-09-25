@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by wxd on 16-9-25.
  */
 @Service
-public class ScheduledService {
+public class ScheduleService {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Scheduled(fixedRate = 5000)
