@@ -6,3 +6,5 @@ add dev branch
 update on master branch
 add new feature1 branch
 add dev branch again
+add stage testing 1
+add stage testing 2
