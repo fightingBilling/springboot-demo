@@ -6,3 +6,5 @@ add dev branch
 update on master branch
 add new feature1 branch
 add dev branch again
+add from feature1
+add from feature1 after feature2
