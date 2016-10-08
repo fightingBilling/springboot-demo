@@ -11,3 +11,4 @@ add stage testing 2
 add from feature1
 add from feature1 after feature2
 commit this message to stage
+add new messge to stage, not commit
