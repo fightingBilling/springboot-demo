@@ -15,3 +15,4 @@ commit this message to stage
 add new messge to stage, not commit
 issue2
 issue2 again
+/home/wxd/workspace/idea/springboot-demo
