@@ -103,4 +103,29 @@ public class AsyncService {
 
 
     }
+
+    @Async
+    public void testBinding(String url, int index){
+        StringBuffer sb = new StringBuffer();
+        sb.append("{\"pid\":\"" + "1700001671" + "\",\"sn\":\"aaaaaaaaaa" + index
+                + "\",\"din\":\"1000000000000"+index+"\",\"dtoken\":\"dotkenaaaaaaaaaa"+index+"\", \"drefreshtoken\": \"drefreshtokenaaaaaaaaaa"+index+"\"}");
+
+        HttpHeaders headers =new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        HttpEntity request=new HttpEntity(sb.toString(), headers);
+
+        RestTemplate restTemplate =  new RestTemplate();
+
+        long start = Calendar.getInstance().getTimeInMillis();
+        try{
+            ResponseEntity response = restTemplate.postForEntity(url, request, String.class);
+
+            //System.out.println(response.getBody());
+            long end2 = Calendar.getInstance().getTimeInMillis();
+            System.out.println("["+index+"] Time:"  + (end2-start) + ", Input:" + sb.toString() + ", Output:" + response.getBody());
+        }catch(Exception e){
+            long end = Calendar.getInstance().getTimeInMillis();
+            System.out.println("["+index+"] Time:"  + (end-start) + ", Input:" + sb.toString() + "exception:" +  e.getMessage());
+        }
+    }
 }
